@@ -21,7 +21,7 @@ class SQLExporter(object):
             
 
     def get_ftp_config(self):
-        return self.config["ftp"]
+        return self.config.get("ftp", None)
 
 
     def get_db_config(self):
@@ -84,6 +84,9 @@ class SQLExporter(object):
 
     def write_to_ftp(self, files):
         cfg = self.get_ftp_config()
+        if not cfg or "host" not in cfg:
+            return
+
         ftp = ftplib.FTP(cfg["host"])
         if "user" in cfg:
             ftp.login(cfg["user"], cfg["password"])
