@@ -17,32 +17,32 @@ Lo script necessita di file di configurazione nella stessa cartella chiamato `co
 
 	{
 
-    "db" : {
-        "type" : "sqlite",
-        "database" : "test.sqlite"
+	    "db" : {
+	        "type" : "sqlite",
+	        "database" : "test.sqlite"
 
-    },
+	    },
 
-    "ftp" : {
-        "host" : "some.ftp.net",
-        "user" : "anonymous",
-        "password" : "someone@somewhere.com",
-        "cwd" : "incoming"
-    },
+	    "ftp" : {
+	        "host" : "some.ftp.net",
+	        "user" : "anonymous",
+	        "password" : "someone@somewhere.com",
+	        "cwd" : "incoming"
+	    },
 
-    "queries" : [
-        {   
-            "sql" : "CREATE TABLE IF NOT EXISTS test2 as SELECT * FROM test"
-        },
+	    "queries" : [
+	        {   
+	            "sql" : "CREATE TABLE IF NOT EXISTS test2 as SELECT * FROM test"
+	        },
 
-        { 
-            "sql" : "SELECT * FROM test",
-            "csv" : "out_[%Y_%m_%d__%H_%M_%S].csv"
-        },
+	        { 
+	            "sql" : "SELECT * FROM test",
+	            "csv" : "out_[%Y_%m_%d__%H_%M_%S].csv"
+	        },
 
-        {
-            "sql" : "DROP TABLE test2"
-        }
+	        {
+	            "sql" : "DROP TABLE test2"
+	        }
 
     	]
 
