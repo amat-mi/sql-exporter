@@ -1,19 +1,33 @@
 {
 
     "db" : {
-
+        "type" : "sqlite",
+        "database" : "test.sqlite"
 
     },
 
 
     "ftp" : {
-
+        "host" : "test.talia.net",
+        "user" : "anonymous",
+        "password" : "someone@somewhere.com",
+        "cwd" : "incoming"
     },
 
 
     "queries" : [
+        {   
+            "sql" : "CREATE TABLE IF NOT EXISTS test2 as SELECT * FROM test"
+        },
 
-        { "sql" : "SELECT foo FROM BAR" }
+        { 
+            "sql" : "SELECT * FROM test",
+            "csv" : "out_[%Y_%m_%d__%H_%M_%S].csv"
+        },
+
+        {
+            "sql" : "DROP TABLE test2"
+        }
 
     ]
 
