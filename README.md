@@ -76,7 +76,7 @@ Ogni query è codificata con un oggetto, con le seguenti proprietà:
 
 * sql: il codice sql da eseguire
 * sql-file: il file in cui trovare il codice sql da eseguire (alernativo a proprietà `sql`)
-*  csv: se la query genera risultati da serializzare in csv, il nome del file da scrivere. In questo nome è possibile sostituire la data ed ora corrente utilizzando il formato `strftime` quindi ad esempio `out_%Y_%m_%D.csv` viene trasformato il giorno 04/05/2015 in `out_2015_05_04.csv`
+*  csv: se la query genera risultati da serializzare in csv, il nome del file da scrivere. In questo nome è possibile sostituire la data ed ora corrente utilizzando il formato `strftime` in una stringa all'interno dei separatori `[` e `]` quindi ad esempio `out_[%Y_%m_%D].csv` viene trasformato il giorno 04/05/2015 in `out_2015_05_04.csv`
 
 
 # TODO (possibili):
