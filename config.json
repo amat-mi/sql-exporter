@@ -1,0 +1,21 @@
+{
+
+    "db" : {
+
+
+    },
+
+
+    "ftp" : {
+
+    },
+
+
+    "queries" : [
+
+        { "sql" : "SELECT foo FROM BAR" }
+
+    ]
+
+
+}
